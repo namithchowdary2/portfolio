@@ -16,10 +16,10 @@
    4. Paste your Public Key, Service ID, and both Template IDs below
    ──────────────────────────────────────────────────────────── */
 const EMAILJS_CONFIG = {
-  PUBLIC_KEY:            'YOUR_PUBLIC_KEY_HERE',
-  SERVICE_ID:            'YOUR_SERVICE_ID_HERE',
-  TEMPLATE_ID:           'YOUR_TEMPLATE_ID_HERE',
-  AUTO_REPLY_TEMPLATE_ID:'YOUR_AUTOREPLY_TEMPLATE_ID_HERE'
+  PUBLIC_KEY:            'd2vzSKpnThdvvIj2y',
+  SERVICE_ID:            'service_hgeg85n',
+  TEMPLATE_ID:           'template_q14jaqr',
+  AUTO_REPLY_TEMPLATE_ID:'template_utuuewn'
 };
 
 /* ══════════════════════════════════════════════════════════════
