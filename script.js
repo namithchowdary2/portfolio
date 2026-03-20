@@ -48,9 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
    1. EMAILJS INIT
    ══════════════════════════════════════════════════════════════ */
 function initEmailJS() {
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-  }
+  const initEmailJSRetry = () => {
+    if (typeof emailjs !== 'undefined') {
+      try {
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+        console.log('✅ EmailJS v4 initialized successfully');
+      } catch (err) {
+        console.error('❌ EmailJS init failed:', err);
+      }
+    } else {
+      console.log('⏳ Waiting for EmailJS script to load...');
+      setTimeout(initEmailJSRetry, 100);
+    }
+  };
+  initEmailJSRetry();
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -862,9 +873,11 @@ function initContactForm() {
     };
 
     try {
-      if (typeof emailjs === 'undefined') {
-        throw new Error('EmailJS not loaded');
+      if (typeof emailjs === 'undefined' || !emailjs.send) {
+        throw new Error('EmailJS v4 not fully loaded (check console)');
       }
+
+      console.log('📤 Sending main email via EmailJS...');
 
       // Check if EmailJS is properly configured
       if (
@@ -894,6 +907,7 @@ function initContactForm() {
         EMAILJS_CONFIG.TEMPLATE_ID,
         templateParams
       );
+      console.log('✅ Main email sent');
 
       // Send auto-reply TO the user
       await emailjs.send(
@@ -905,6 +919,7 @@ function initContactForm() {
           to_name:  templateParams.from_name
         }
       );
+      console.log('✅ Auto-reply sent');
 
       // Success state
       successMsg.removeAttribute('hidden');
@@ -915,9 +930,23 @@ function initContactForm() {
       setTimeout(() => successMsg.setAttribute('hidden', ''), 6000);
 
     } catch (err) {
-      console.error('EmailJS error:', err);
+      console.error('❌ Detailed EmailJS error:', {
+        message: err.message,
+        status: err.status,
+        text: err.text,
+        serviceID: EMAILJS_CONFIG.SERVICE_ID,
+        templateID: EMAILJS_CONFIG.TEMPLATE_ID
+      });
+      
+      let userMsg = 'Something went wrong sending the email. Check console for details or email me: namithchowdary143@gmail.com';
+      if (err.status === 400) userMsg = 'Invalid form data. Please check your inputs.';
+      else if (err.status === 401) userMsg = 'EmailJS authentication failed. Check credentials.';
+      else if (err.status === 403) userMsg = 'EmailJS service blocked.';
+      else if (err.status === 404) userMsg = 'EmailJS template/service not found.';
+      
+      errorMsg.textContent = `❌ ${userMsg}`;
       errorMsg.removeAttribute('hidden');
-      setTimeout(() => errorMsg.setAttribute('hidden', ''), 8000);
+      setTimeout(() => errorMsg.setAttribute('hidden', ''), 10000);
     } finally {
       submitBtn.disabled = false;
       btnText.hidden     = false;
