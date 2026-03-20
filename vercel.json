@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "name": "namith-chowdary-portfolio",
+  "builds": [
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.js)",
+      "headers": {
+        "Cache-Control": "public, max-age=86400, stale-while-revalidate=3600",
+        "X-Content-Type-Options": "nosniff"
+      },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*\\.css)",
+      "headers": {
+        "Cache-Control": "public, max-age=86400, stale-while-revalidate=3600"
+      },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "microphone=(self)"
+      },
+      "dest": "/index.html"
+    }
+  ]
+}

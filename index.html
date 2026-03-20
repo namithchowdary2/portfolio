@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ── Primary SEO ── -->
+  <title>Namith Chowdary | Full Stack Developer · B.Tech CSE @ LPU</title>
+  <meta name="description" content="Portfolio of Yedlapalli Devi Namith Chowdary — Full Stack Developer, Python & Java engineer, ML practitioner, B.Tech CSE student at LPU. 3 real projects, 6 certifications, Hack-a-Throne finalist." />
+  <meta name="keywords" content="Namith Chowdary, Yedlapalli Devi Namith Chowdary, Full Stack Developer, Python, Java, Flask, Machine Learning, LPU CSE, Portfolio, Vijayawada" />
+  <meta name="author" content="Yedlapalli Devi Namith Chowdary" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050810" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Namith Chowdary | Full Stack Developer Portfolio" />
+  <meta property="og:description" content="Python · Java · Flask · ML · B.Tech CSE @ LPU. 3 real projects, 6 certs, Hack-a-Throne finalist." />
+  <meta property="og:image"       content="assets/images/profile.png" />
+  <meta property="og:url"         content="https://namithchowdary.vercel.app" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Namith Chowdary | Full Stack Developer" />
+  <meta name="twitter:description" content="Python · Java · Flask · ML · B.Tech CSE @ LPU" />
+  <meta name="twitter:image"       content="assets/images/profile.png" />
+
+  <!-- ── Canonical ── -->
+  <link rel="canonical" href="https://namithchowdary.vercel.app" />
+
+  <!-- ── Favicon SVG ── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23050810'/><text y='.9em' font-size='72' x='14'>💻</text></svg>" />
+
+  <!-- ── Preconnect (reduce latency) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- ── Google Fonts ── -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ── Critical inline CSS (prevents FOUC) ── -->
+  <style>
+    html,body{background:#020510;margin:0;padding:0;}
+    body.intro-active{overflow:hidden}
+    @keyframes lspin{to{transform:rotate(360deg)}}
+  </style>
+
+  <!-- ── Main stylesheet ── -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ── Non-blocking libraries ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+
+  <!-- ── JSON-LD Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Yedlapalli Devi Namith Chowdary",
+    "alternateName":"Namith Chowdary",
+    "jobTitle":"Full Stack Developer",
+    "description":"B.Tech CSE student at LPU. Python, Java, Flask, ML developer.",
+    "url":"https://namithchowdary.vercel.app",
+    "email":"namithchowdary143@gmail.com",
+    "telephone":"+91-6304475233",
+    "address":{"@type":"PostalAddress","addressLocality":"Phagwara","addressRegion":"Punjab","addressCountry":"IN"},
+    "alumniOf":{"@type":"CollegeOrUniversity","name":"Lovely Professional University"},
+    "sameAs":[
+      "https://linkedin.com/in/yedlapallidevinamithchowdary",
+      "https://github.com/namithchowdary2",
+      "https://leetcode.com/u/GKElTSRAI9/"
+    ],
+    "knowsAbout":["Python","Java","JavaScript","Flask","Machine Learning","HTML","CSS","MySQL","Git"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- INTRO SCREEN — instant CSS-only, no heavy assets -->
+  <div id="intro-screen">
+    <canvas id="intro-canvas"></canvas>
+    <!-- CSS-only 3D robot avatar — zero loading time -->
+    <div class="intro-robot" id="introRobot">
+      <div class="ir-head">
+        <div class="ir-visor">
+          <span class="ir-dot"></span><span class="ir-dot"></span><span class="ir-dot"></span>
+        </div>
+        <div class="ir-antenna"><div class="ir-antenna-tip"></div></div>
+        <div class="ir-ear ir-ear-l"></div>
+        <div class="ir-ear ir-ear-r"></div>
+      </div>
+      <div class="ir-neck"></div>
+      <div class="ir-torso">
+        <div class="ir-chest-panel">
+          <div class="ir-chest-core"></div>
+          <div class="ir-chest-lines">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="ir-arm ir-arm-l">
+          <div class="ir-upper-arm"></div>
+          <div class="ir-forearm"></div>
+          <div class="ir-hand"></div>
+        </div>
+        <div class="ir-arm ir-arm-r">
+          <div class="ir-upper-arm"></div>
+          <div class="ir-forearm"></div>
+          <div class="ir-hand"></div>
+        </div>
+      </div>
+      <div class="ir-hips"></div>
+      <div class="ir-legs">
+        <div class="ir-leg ir-leg-l">
+          <div class="ir-thigh"></div>
+          <div class="ir-shin"></div>
+          <div class="ir-foot"></div>
+        </div>
+        <div class="ir-leg ir-leg-r">
+          <div class="ir-thigh"></div>
+          <div class="ir-shin"></div>
+          <div class="ir-foot"></div>
+        </div>
+      </div>
+      <div class="ir-shadow"></div>
+    </div>
+
+    <div class="intro-center">
+      <div class="intro-tag">&lt; Hello World /&gt;</div>
+      <div class="intro-name">
+        <span class="intro-n1">Namith</span>
+        <span class="intro-n2">Chowdary</span>
+      </div>
+      <div class="intro-role">Full Stack Developer &nbsp;·&nbsp; ML Engineer</div>
+      <div class="intro-bar-wrap"><div class="intro-bar" id="introBar"></div></div>
+      <div class="intro-hint" id="introHint">click anywhere to skip</div>
+    </div>
+  </div>
+
+  <!-- Custom cursor handled via CSS in cursor.js -->
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">
+      <svg class="brand-svg" viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg" aria-label="Namith Chowdary" width="48" height="36">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00d4ff"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+          </linearGradient>
+        </defs>
+        <!-- N shape -->
+        <path d="M4 4 L4 32 L10 32 L10 16 L24 32 L30 32 L30 4 L24 4 L24 20 L10 4 Z" fill="url(#lg1)"/>
+        <!-- Circuit dot accents -->
+        <circle cx="38" cy="8"  r="2.5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="44" cy="8"  r="1.5" fill="#a855f7" opacity="0.7"/>
+        <circle cx="38" cy="18" r="1.5" fill="#a855f7" opacity="0.7"/>
+        <circle cx="44" cy="18" r="2.5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="38" cy="28" r="2"   fill="#00d4ff" opacity="0.8"/>
+        <circle cx="44" cy="28" r="2"   fill="#a855f7" opacity="0.8"/>
+        <line x1="38" y1="8"  x2="38" y2="28" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+        <line x1="44" y1="8"  x2="44" y2="28" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+        <line x1="38" y1="18" x2="44" y2="18" stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+      </svg>
+      <span class="brand-tagline">dev</span>
+    </div>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#competitive" class="nav-link">CP</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <a href="assets/resume.pdf" download="Namith_Chowdary_Resume.pdf" class="nav-resume-btn" aria-label="Download Resume">
+      Resume <span class="btn-icon">↓</span>
+    </a>
+
+    <button id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">
+      <span id="toggle-icon">🌙</span>
+    </button>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile menu">
+    <ul role="list">
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#competitive" class="mobile-link">Competitive</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="assets/resume.pdf" download class="mobile-link mobile-resume">Download Resume ↓</a></li>
+    </ul>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 1: HERO
+  ════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero section">
+
+<!-- Hero: text left + photo right -->
+    <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-greeting" aria-label="Greeting">Hello, I'm</p>
+
+      <h1 class="hero-name" aria-label="Name">
+        <div class="hero-name-bar"></div>
+        <div class="hero-name-text">
+          <span class="name-line1">Namith</span>
+          <span class="name-line2">Chowdary</span>
+        </div>
+      </h1>
+
+      <div class="hero-typewriter" aria-live="polite">
+        <span id="typewriter-text"></span>
+        <span class="typewriter-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <p class="hero-subtitle">
+        B.Tech CSE @ LPU &nbsp;·&nbsp; Python &nbsp;·&nbsp; Java &nbsp;·&nbsp; Full Stack &nbsp;·&nbsp; ML
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="assets/resume.pdf" download="Namith_Chowdary_Resume.pdf" class="btn-secondary" id="hero-resume-btn">
+          <span class="btn-icon-left">↓</span> Download Resume
+        </a>
+      </div>
+
+      <!-- Social icons -->
+      <div class="hero-socials" role="list" aria-label="Social links">
+        <a href="https://github.com/namithchowdary2" target="_blank" rel="noopener" role="listitem" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/yedlapallidevinamithchowdary" target="_blank" rel="noopener" role="listitem" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://leetcode.com/u/GKElTSRAI9/" target="_blank" rel="noopener" role="listitem" aria-label="LeetCode">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+        </a>
+        <a href="mailto:namithchowdary143@gmail.com" role="listitem" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+      </div>
+    </div><!-- /.hero-content -->
+
+    <!-- Connecting visual between text and photo -->
+    <div class="hero-connector" aria-hidden="true">
+      <svg viewBox="0 0 120 400" xmlns="http://www.w3.org/2000/svg" width="120" height="100%" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="connGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="rgba(0,212,255,0)"/>
+            <stop offset="30%"  stop-color="rgba(0,212,255,0.5)"/>
+            <stop offset="70%"  stop-color="rgba(168,85,247,0.5)"/>
+            <stop offset="100%" stop-color="rgba(168,85,247,0)"/>
+          </linearGradient>
+          <linearGradient id="connGrad2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="rgba(0,212,255,0)"/>
+            <stop offset="50%"  stop-color="rgba(0,212,255,0.2)"/>
+            <stop offset="100%" stop-color="rgba(0,212,255,0)"/>
+          </linearGradient>
+        </defs>
+        <!-- Main vertical line -->
+        <line x1="60" y1="0" x2="60" y2="400" stroke="url(#connGrad)" stroke-width="1.5"/>
+        <!-- Secondary lines -->
+        <line x1="30" y1="40" x2="30" y2="360" stroke="url(#connGrad2)" stroke-width="0.8"/>
+        <line x1="90" y1="60" x2="90" y2="340" stroke="url(#connGrad2)" stroke-width="0.8"/>
+        <!-- Horizontal connectors -->
+        <line x1="30" y1="120" x2="90" y2="120" stroke="rgba(0,212,255,0.2)" stroke-width="0.8"/>
+        <line x1="30" y1="200" x2="90" y2="200" stroke="rgba(168,85,247,0.2)" stroke-width="0.8"/>
+        <line x1="30" y1="280" x2="90" y2="280" stroke="rgba(0,212,255,0.2)" stroke-width="0.8"/>
+        <!-- Node dots -->
+        <circle cx="60" cy="120" r="4" fill="#00d4ff" opacity="0.7"/>
+        <circle cx="60" cy="200" r="5" fill="#a855f7" opacity="0.8"/>
+        <circle cx="60" cy="280" r="4" fill="#00d4ff" opacity="0.7"/>
+        <circle cx="30" cy="120" r="2.5" fill="#00d4ff" opacity="0.5"/>
+        <circle cx="90" cy="120" r="2.5" fill="#00d4ff" opacity="0.5"/>
+        <circle cx="30" cy="280" r="2.5" fill="#00d4ff" opacity="0.5"/>
+        <circle cx="90" cy="280" r="2.5" fill="#00d4ff" opacity="0.5"/>
+        <!-- Animated scan dot -->
+        <circle cx="60" cy="0" r="3" fill="#00d4ff" opacity="0.9">
+          <animate attributeName="cy" values="40;360;40" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+
+    <!-- Profile photo + floating badges -->
+    <div class="hero-right">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo-ring hero-photo-ring-2"></div>
+        <img src="assets/images/profile.png" alt="Namith Chowdary" class="hero-photo" loading="eager"/>
+      </div>
+
+      <!-- Floating stat badges -->
+      <div class="hero-badge hero-badge-1">
+        <span class="hb-icon">🏆</span>
+        <div><strong>Hack-a-Throne</strong><small>Finalist · GFG</small></div>
+      </div>
+      <div class="hero-badge hero-badge-2">
+        <span class="hb-icon">🎓</span>
+        <div><strong>LPU</strong><small>B.Tech CSE</small></div>
+      </div>
+      <div class="hero-badge hero-badge-3">
+        <span class="hb-icon">⚡</span>
+        <div><strong>3 Projects</strong><small>Shipped</small></div>
+      </div>
+      <div class="hero-badge hero-badge-4">
+        <span class="hb-icon">🏅</span>
+        <div><strong>6 Certs</strong><small>Verified</small></div>
+      </div>
+    </div><!-- /.hero-right -->
+    </div><!-- /.hero-inner -->
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 2: SUMMARY
+  ════════════════════════════════════════════════════════ -->
+  <section id="summary" class="section" aria-label="Professional Summary">
+    <div class="container">
+      <div class="summary-inner">
+        <div class="summary-tag">// Summary</div>
+        <blockquote class="summary-text" id="summary-quote">
+          A passionate Computer Science undergrad at LPU with hands-on experience in full-stack web development and machine learning. I build real, production-level applications — from interactive learning platforms to ML-powered smart systems. Currently deepening my expertise in Java, Python, and database-driven architectures.
+        </blockquote>
+        <div class="summary-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="3">0</span>
+            <span class="stat-label">Real Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="6">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="1">0</span>
+            <span class="stat-label">Hackathon Final</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 3: ABOUT
+  ════════════════════════════════════════════════════════ -->
+  <section id="about" class="section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01 — About</span>
+        <h2 id="about-heading" class="section-title">The Story So Far</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Profile image -->
+        <div class="about-image-wrapper">
+          <div class="about-image-frame">
+            <img
+              src="assets/images/profile.png"
+              alt="Namith Chowdary — Full Stack Developer"
+              class="about-photo"
+              loading="lazy"
+            />
+            <div class="about-image-glow" aria-hidden="true"></div>
+          </div>
+          <!-- Floating info card -->
+          <div class="about-float-card">
+            <span class="float-icon">🎓</span>
+            <div>
+              <strong>LPU</strong>
+              <small>B.Tech CSE · 2023–Present</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story text -->
+        <div class="about-content">
+          <div class="about-paragraphs" id="about-paragraphs">
+            <!-- Populated by data.js via script.js -->
+          </div>
+
+          <!-- Highlights grid -->
+          <div class="about-highlights" id="about-highlights">
+            <!-- Populated by data.js -->
+          </div>
+
+          <!-- Education timeline -->
+          <div class="education-timeline">
+            <h3 class="timeline-heading">Education</h3>
+            <div class="timeline-list" id="education-list">
+              <!-- Populated by data.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 4: SKILLS
+  ════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02 — Skills</span>
+        <h2 id="skills-heading" class="section-title">Technologies & Tools</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skills-category" data-category="Languages">
+          <h3 class="category-title">
+            <span class="cat-icon">💻</span> Languages
+          </h3>
+          <div class="skill-bars" id="skills-languages">
+            <!-- Populated by data.js -->
+          </div>
+        </div>
+
+        <!-- Web -->
+        <div class="skills-category" data-category="Web Technologies">
+          <h3 class="category-title">
+            <span class="cat-icon">🌐</span> Web Technologies
+          </h3>
+          <div class="skill-bars" id="skills-web">
+            <!-- Populated by data.js -->
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills-category" data-category="Tools & Platforms">
+          <h3 class="category-title">
+            <span class="cat-icon">🛠️</span> Tools & Platforms
+          </h3>
+          <div class="skill-bars" id="skills-tools">
+            <!-- Populated by data.js -->
+          </div>
+        </div>
+
+        <!-- ML -->
+        <div class="skills-category" data-category="ML & Data Science">
+          <h3 class="category-title">
+            <span class="cat-icon">🤖</span> ML & Data Science
+          </h3>
+          <div class="skill-bars" id="skills-ml">
+            <!-- Populated by data.js -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Soft skills -->
+      <div class="soft-skills-section">
+        <h3 class="category-title center">
+          <span class="cat-icon">🧠</span> Soft Skills
+        </h3>
+        <div class="soft-skills-chips" id="soft-skills">
+          <!-- Populated by data.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 5: PROJECTS
+  ════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03 — Projects</span>
+        <h2 id="projects-heading" class="section-title">What I've Built</h2>
+        <p class="section-subtitle">Real projects. Real code. Real impact.</p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated by data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 6: CERTIFICATIONS
+  ════════════════════════════════════════════════════════ -->
+  <section id="certifications" class="section" aria-labelledby="certs-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04 — Certifications</span>
+        <h2 id="certs-heading" class="section-title">Credentials & Courses</h2>
+        <p class="section-subtitle">Verified credentials from global platforms and universities</p>
+      </div>
+
+      <div class="certs-grid" id="certs-grid">
+        <!-- Populated by data.js -->
+      </div>
+    </div>
+
+    <!-- Cert modal/lightbox -->
+    <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+      <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+      <div class="cert-modal-content">
+        <button class="cert-modal-close" id="certModalClose" aria-label="Close certificate">✕</button>
+        <img id="certModalImage" src="" alt="Certificate" />
+        <div class="cert-modal-info">
+          <h3 id="certModalTitle"></h3>
+          <p id="certModalIssuer"></p>
+          <p id="certModalDate"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 7: EXPERIENCE
+  ════════════════════════════════════════════════════════ -->
+  <section id="experience" class="section" aria-labelledby="exp-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05 — Experience</span>
+        <h2 id="exp-heading" class="section-title">Training & Experience</h2>
+      </div>
+
+      <div class="experience-list" id="experience-list">
+        <!-- Populated by data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 8: COMPETITIVE PROGRAMMING & HACKATHONS
+  ════════════════════════════════════════════════════════ -->
+  <section id="competitive" class="section" aria-labelledby="cp-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 06 — Competitive</span>
+        <h2 id="cp-heading" class="section-title">CP & Hackathons</h2>
+        <p class="section-subtitle">Sharpening problem-solving skills, one challenge at a time</p>
+      </div>
+
+      <div class="competitive-grid">
+
+        <!-- LeetCode card -->
+        <div class="leetcode-card">
+          <div class="lc-header">
+            <span class="lc-icon">⚡</span>
+            <div>
+              <h3>LeetCode</h3>
+              <a href="https://leetcode.com/u/GKElTSRAI9/" target="_blank" rel="noopener" class="lc-link">
+                @GKElTSRAI9 ↗
+              </a>
+            </div>
+          </div>
+          <p class="lc-desc">Actively solving Data Structures & Algorithms problems to sharpen problem-solving skills and prepare for technical interviews.</p>
+          <a href="https://leetcode.com/u/GKElTSRAI9/" target="_blank" rel="noopener" class="btn-outline">
+            View Profile ↗
+          </a>
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievements-list" id="achievements-list">
+          <!-- Populated by data.js -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 9: OPEN SOURCE
+  ════════════════════════════════════════════════════════ -->
+  <section id="opensource" class="section" aria-labelledby="oss-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 07 — Open Source</span>
+        <h2 id="oss-heading" class="section-title">Open Source</h2>
+      </div>
+
+      <div class="oss-card placeholder-card">
+        <div class="placeholder-badge">🚧 In Progress</div>
+        <p class="oss-message">
+          Actively exploring open source opportunities. Currently contributing to personal projects on GitHub and planning first official OSS contributions.
+        </p>
+
+        <div class="oss-stats" id="oss-stats">
+          <!-- Populated by data.js -->
+        </div>
+
+        <a href="https://github.com/namithchowdary2" target="_blank" rel="noopener" class="btn-outline">
+          GitHub Profile ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 10: BLOG
+  ════════════════════════════════════════════════════════ -->
+  <section id="blog" class="section" aria-labelledby="blog-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 08 — Blog</span>
+        <h2 id="blog-heading" class="section-title">Technical Writing</h2>
+        <p class="section-subtitle">Thoughts on code, projects, and learning — coming soon</p>
+      </div>
+
+      <div class="blog-grid" id="blog-grid">
+        <!-- Populated by data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 11: RESEARCH
+  ════════════════════════════════════════════════════════ -->
+  <section id="research" class="section" aria-labelledby="research-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 09 — Research</span>
+        <h2 id="research-heading" class="section-title">Research & Publications</h2>
+      </div>
+
+      <div class="research-list" id="research-list">
+        <!-- Populated by data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 12: CONTACT
+  ════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 10 — Contact</span>
+        <h2 id="contact-heading" class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Open to opportunities, collaborations, and good conversations</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:namithchowdary143@gmail.com">namithchowdary143@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+916304475233">+91-6304475233</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Location</strong>
+              <span>Phagwara, Punjab, India</span>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="contact-socials">
+            <a href="https://github.com/namithchowdary2" target="_blank" rel="noopener" class="social-pill">
+              GitHub ↗
+            </a>
+            <a href="https://linkedin.com/in/yedlapallidevinamithchowdary" target="_blank" rel="noopener" class="social-pill">
+              LinkedIn ↗
+            </a>
+            <a href="https://leetcode.com/u/GKElTSRAI9/" target="_blank" rel="noopener" class="social-pill">
+              LeetCode ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="form-name">Your Name</label>
+            <input
+              type="text"
+              id="form-name"
+              name="from_name"
+              placeholder="John Doe"
+              required
+              autocomplete="name"
+            />
+            <span class="form-error" id="error-name" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="form-email">Your Email</label>
+            <input
+              type="email"
+              id="form-email"
+              name="from_email"
+              placeholder="john@example.com"
+              required
+              autocomplete="email"
+            />
+            <span class="form-error" id="error-email" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input
+              type="text"
+              id="form-subject"
+              name="subject"
+              placeholder="Project Collaboration"
+              required
+            />
+            <span class="form-error" id="error-subject" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea
+              id="form-message"
+              name="message"
+              rows="5"
+              placeholder="Hi Namith, I'd like to discuss..."
+              required
+            ></textarea>
+            <span class="form-error" id="error-message" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit" id="form-submit-btn">
+            <span id="form-btn-text">Send Message</span>
+            <span id="form-btn-loader" class="btn-loader" aria-hidden="true" hidden>
+              <span class="spinner"></span> Sending...
+            </span>
+          </button>
+
+          <!-- Success / Error message -->
+          <div id="form-success" class="form-success" role="alert" hidden>
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+          <div id="form-error-msg" class="form-error-banner" role="alert" hidden>
+            ❌ Something went wrong. Please try again or email me directly.
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+
+    <!-- Top footer grid -->
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="footer-logo-text">
+            <svg class="brand-svg" viewBox="0 0 48 36" xmlns="http://www.w3.org/2000/svg" aria-label="Namith Chowdary" width="48" height="36">
+        <defs>
+          <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00d4ff"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+          </linearGradient>
+        </defs>
+        <!-- N shape -->
+        <path d="M4 4 L4 32 L10 32 L10 16 L24 32 L30 32 L30 4 L24 4 L24 20 L10 4 Z" fill="url(#lg2)"/>
+        <!-- Circuit dot accents -->
+        <circle cx="38" cy="8"  r="2.5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="44" cy="8"  r="1.5" fill="#a855f7" opacity="0.7"/>
+        <circle cx="38" cy="18" r="1.5" fill="#a855f7" opacity="0.7"/>
+        <circle cx="44" cy="18" r="2.5" fill="#00d4ff" opacity="0.9"/>
+        <circle cx="38" cy="28" r="2"   fill="#00d4ff" opacity="0.8"/>
+        <circle cx="44" cy="28" r="2"   fill="#a855f7" opacity="0.8"/>
+        <line x1="38" y1="8"  x2="38" y2="28" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+        <line x1="44" y1="8"  x2="44" y2="28" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+        <line x1="38" y1="18" x2="44" y2="18" stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+      </svg>
+      <span class="brand-tagline">dev</span>
+          </div>
+          <p class="footer-bio">Full Stack Developer &amp; ML Engineer based in Punjab, India. Building real software with clean code.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/namithchowdary2" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/yedlapallidevinamithchowdary" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://leetcode.com/u/GKElTSRAI9/" target="_blank" rel="noopener" aria-label="LeetCode">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+            </a>
+            <a href="mailto:namithchowdary143@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#competitive">CP & Hackathons</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Projects column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Projects</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/namithchowdary2/learning-platform" target="_blank" rel="noopener">Learning Platform ↗</a></li>
+            <li><a href="https://smart-resource-conservation.vercel.app/" target="_blank" rel="noopener">Smart Resource AI ↗</a></li>
+            <li><a href="https://github.com/namithchowdary2/soil-clustering-precision-farming" target="_blank" rel="noopener">Soil Clustering ↗</a></li>
+            <li><a href="https://github.com/namithchowdary2" target="_blank" rel="noopener">All Repos on GitHub ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact column -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links footer-contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+              <a href="mailto:namithchowdary143@gmail.com">namithchowdary143@gmail.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="tel:+916304475233">+91-6304475233</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Phagwara, Punjab, India</span>
+            </li>
+          </ul>
+          <a href="assets/resume.pdf" download="Namith_Chowdary_Resume.pdf" class="footer-resume-btn">
+            ↓ Download Resume
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">© 2025 Yedlapalli Devi Namith Chowdary. All rights reserved.</p>
+        <p class="footer-stack">Built with HTML · CSS · JavaScript · Spline 3D</p>
+        <button class="footer-back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑ Top</button>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+       CHATBOT
+  ════════════════════════════════════════════════════════ -->
+
+  <!-- Chatbot trigger button -->
+  <button class="chatbot-orb" id="chatbotOrb" aria-label="Open AI assistant" aria-expanded="false">
+    <div class="orb-glow" aria-hidden="true"></div>
+    <span class="orb-icon" aria-hidden="true">🤖</span>
+    <span class="orb-pulse" aria-hidden="true"></span>
+  </button>
+
+  <!-- Chatbot window -->
+  <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-modal="true" aria-label="NamithBot AI assistant" hidden>
+    <!-- Header -->
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <div class="chatbot-avatar" aria-hidden="true">🤖</div>
+        <div>
+          <strong>NamithBot</strong>
+          <span class="chatbot-status">● Online</span>
+        </div>
+      </div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="chatbot-messages" id="chatbotMessages" role="log" aria-live="polite" aria-label="Chat messages">
+      <!-- Messages injected by chatbot.js -->
+    </div>
+
+    <!-- Quick replies -->
+    <div class="chatbot-quick-replies" id="chatbotQuickReplies" aria-label="Quick reply options">
+      <!-- Injected by chatbot.js -->
+    </div>
+
+    <!-- Input area -->
+    <div class="chatbot-input-area">
+      <input
+        type="text"
+        id="chatbotInput"
+        placeholder="Ask me anything..."
+        autocomplete="off"
+        aria-label="Chat message input"
+      />
+      <button id="chatbotVoice" class="chatbot-voice-btn" aria-label="Voice input">🎤</button>
+      <button id="chatbotSend" class="chatbot-send-btn" aria-label="Send message">➤</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       BACK TO TOP BUTTON
+  ════════════════════════════════════════════════════════ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    ↑
+  </button>
+
+  <!-- ════════════════════════════════════════════════════════
+       SCRIPTS — order matters: data → main → features
+  ════════════════════════════════════════════════════════ -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="cursor.js"></script>
+  <script src="scorpion.js"></script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>
